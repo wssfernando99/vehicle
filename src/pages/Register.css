@@ -1,0 +1,114 @@
+.wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url('images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container{
+    border-radius: 20px;
+    display: flex;
+    background-color: rgb(156, 154, 154);
+    width: 400px;
+    height: 350px;
+    margin-top: 40%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.registerhead{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.registeremail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+.registerpassword{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+.registername{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+.submitform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+#rbutton{
+    width: 300px;
+    height: 25px;
+    border: 1px;
+    border-radius: 5px;
+    background-color: rgb(27, 36, 43);
+    color: aliceblue; 
+    font-size: 16px;  
+    cursor: pointer;
+}
+.iemail{
+    border-radius: 5px;
+    border: 1px;
+    width: 200px;
+    height: 25px;
+}
+.ipassword{
+    border-radius: 5px;
+    border: 1px;
+    width: 200px;
+    height: 25px;
+}
+.iname{
+    border-radius: 5px;
+    border: 1px;
+    width: 200px;
+    height: 25px;
+}
+.lemail{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.lpassword{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.lname{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.loginlink{
+    color: blue;
+}
+.rpasswordsection{
+    display: flex;
+    flex-direction: column;
+}
+.remailsection{
+    display: flex;
+    flex-direction: column;
+}
+.rnamesection{
+    display: flex;
+    flex-direction: column;
+}
+.text-warning{
+    color: red;
+}
