@@ -28,8 +28,8 @@ export const Login = () => {
             axios.post('http://localhost:8082/login', values)
                 .then(res => {
                     if(res.data === "Success"){
-                        navigate('/Homepage');
-                    }
+                        navigate('/Homepage'); 
+                     }
                     else{
                         alert("No record exixted");
                     }
