@@ -1,0 +1,8 @@
+.footer-main-container{
+    display: flex;
+    background-color: rgb(58, 58, 57);
+    width: 100%;
+    height:fit-content;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+}
