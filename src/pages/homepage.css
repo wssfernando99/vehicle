@@ -1,5 +1,5 @@
 
-.first-container{
+.first-container-home{
     background-image: url('images/bg1.jpg');
     height: 100vh;
     width: 100vw;
@@ -9,7 +9,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-.welcome-container{
+.welcome-container-home{
     color: aliceblue;
     font-size: larger;
 }
