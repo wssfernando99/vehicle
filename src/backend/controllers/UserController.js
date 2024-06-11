@@ -5,11 +5,11 @@ exports.register = (req,res)=>{
     const email = req.body.email;
     const password = req.body.password;
 
-    const newUser = new User([
+    const newUser = new User({
         name,
         email,
         password
-    ]);
+    });
     newUser.save().then(()=>{
         res.json("Uer details added successfully")
     }).catch((err)=>{
