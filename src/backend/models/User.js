@@ -1,20 +1,20 @@
-const { type } = require('@testing-library/user-event/dist/type');
+
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
 
-const userSchema =new Schema({
+const userSchema = new Schema({
     name : {
         type:String,
-        require:true
+        required:true
     },
     email : {
         type:String,
-        require:true
+        required:true
     },
     password : {
         type:String,
-        require:true
+        required:true
     }
 })
 
