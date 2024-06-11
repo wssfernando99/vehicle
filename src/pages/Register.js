@@ -34,7 +34,7 @@ export const Register = () => {
         setErrors(validationErrors);
     
         if (!Object.values(validationErrors).some(error => error !== "")) {
-            axios.post('http://localhost:8082/signup', values)
+            axios.post('http://localhost:8082/user/register', values)
                 .then(res => {
                     navigate('/Login');
                 })
