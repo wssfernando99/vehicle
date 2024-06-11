@@ -3,12 +3,15 @@ const mongoose = require('mongoose')
 const bodyParser= require('body-parser')
 const cors = require('cors');
 require('donenv').configs();
+const userRouter = require('./routes/User')
 
 const app = express();
 
 app.use(bodyParser.json())      //to send json format data
 app.use(cors());        //This control is essential for security.
 app.use(express.json());           
+
+app.use('/user',userRouter);
 
 const URL = process.env.MONGODB_URL;
 
