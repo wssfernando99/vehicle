@@ -16,3 +16,7 @@ exports.register = (req,res)=>{
         console.log(err);
     })
 }
+
+exports.login = (req, res) => {
+    
+};

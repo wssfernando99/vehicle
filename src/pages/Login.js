@@ -25,7 +25,7 @@ export const Login = () => {
         setErrors(validationErrors);
 
         if (!Object.values(validationErrors).some(error => error !=="")){
-            axios.post('http://localhost:8082/login', values)
+            axios.post('http://localhost:8082/user/login', values)
                 .then(res => {
                     if(res.data === "Success"){
                         navigate('/Homepage'); 
