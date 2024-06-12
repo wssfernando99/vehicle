@@ -24,7 +24,7 @@ exports.login = (req, res) => {
         }else{
             user.comparePassword(req.body.password, (err,isMatch)=>{
                 if(!isMatch){
-                    return res.status(404).json({success:fail,message:"Your passowrd is wrong"})
+                    return res.status(404).json({success:false,message:"Your passowrd is wrong"});
                 }else{
                     res.status(200).json({success:true,message:"Successfully Logged in!"})
                 }
