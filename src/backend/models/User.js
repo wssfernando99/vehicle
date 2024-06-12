@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt')
+
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose');
 
@@ -19,30 +19,28 @@ const userSchema = new Schema({
     }
 })
 // Saving user data
-UserSchema.pre('save', function (next) {
-    var user = this;
-    if (user.isModified('password')) {
-        //checking if password field is available and modified
-        bcrypt.genSalt(SALT, function (err, salt) {
-            if (err) return next(err)
+// userSchema.pre('save', function (next) {
+//     var user = this;
+//     if (user.isModified('password')) {
+//         //checking if password field is available and modified
+//         bcrypt.genSalt(SALT, function (err, salt) {
+//             if (err) return next(err)
         
-            bcrypt.hash(user.password, salt, function (err, hash) {
-                if (err) return next(err)
-                user.password = hash;
-                next();
-            });
-        });
-    } else {
-        next();
-    }
-});
+//             bcrypt.hash(user.password, salt, function (err, hash) {
+//                 if (err) return next(err)
+//                 user.password = hash;
+//                 next();
+//             });
+//         });
+//     } else {
+//         next();
+//     }
+// });
      
 // For comparing the users entered password with database duing login 
-UserSchema.methods.comparePassword = function (candidatePassword, callBack) {
-    bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-        if (err) return callBack(err);
+userSchema.methods.comparePassword = function (candidatePassword, callBack) {
+        const isMatch = candidatePassword == this.password
         callBack(null, isMatch);
-    });
 };
 
 const User = mongoose.model('User',userSchema);
