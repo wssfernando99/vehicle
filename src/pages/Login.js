@@ -27,7 +27,7 @@ export const Login = () => {
         if (!Object.values(validationErrors).some(error => error !=="")){
             axios.post('http://localhost:8082/user/login', values)
                 .then(res => {
-                    if(res.data === "Successfully Logged in!"){
+                    if(res.data === "true"){
                         navigate('/Homepage'); 
                      }
                     else{
